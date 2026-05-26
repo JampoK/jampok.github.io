@@ -265,6 +265,11 @@ h4 {
 	font-family: 'Inter-Medium', 'Helvetica', sans-serif;
 	font-size: 14px;
 	color: var(--black);
+	margin: 0.5rem 0 0.25rem;
+}
+
+.experience-details-inner h4:first-child {
+	margin-top: 0;
 }
 
 p.large {
@@ -296,6 +301,51 @@ p.small {
 
 .bold {
 	font-family: 'Inter-Medium', 'Helvetica', sans-serif;
+}
+
+/* LIST STYLING */
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	font-family: 'Inter-Medium', 'Helvetica', sans-serif;
+	font-size: 14px;
+	line-height: 150%;
+	color: var(--black);
+	padding: 2px 0;
+}
+
+.experience-details-inner ul {
+	padding-left: 1rem;
+}
+
+.experience-details-inner li {
+	position: relative;
+	padding-left: 12px;
+}
+
+.experience-details-inner li::before {
+	content: '—';
+	position: absolute;
+	left: 0;
+	color: var(--grey);
+}
+
+.experience-details-inner li a {
+	color: var(--black);
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-color: var(--softgrey);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 4px;
+	transition: 0.3s ease;
+}
+
+.experience-details-inner li a:hover {
+	text-decoration-color: var(--grey);
 }
 
 /* CONTENT */
