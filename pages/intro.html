@@ -177,8 +177,8 @@
 </div>
 
 <div class="content">
-    <h2>Certifications</h2>
-    <div class="experience-details">
+    <h2 class="section-toggle" style="cursor:pointer;">Certifications ▸</h2>
+    <div class="experience-details cert-section" style="display:none;">
         <div class="experience-details-inner">
             <ul>
                 <li><a href="https://www.coursera.org/account/accomplishments/specialization/IW6ULNPBT76U" target="_blank" rel="noopener">Google Project Management</a> — Google</li>
@@ -192,8 +192,8 @@
 </div>
 
 <div class="content">
-    <h2>Core Skills</h2>
-    <div class="experience-details">
+    <h2 class="section-toggle" style="cursor:pointer;">Core Skills ▸</h2>
+    <div class="experience-details skills-section" style="display:none;">
         <div class="experience-details-inner">
             <h4>SEO &amp; Digital Marketing</h4>
             <ul>
@@ -240,3 +240,22 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Toggle Certifications & Core Skills sections
+document.addEventListener('DOMContentLoaded', function() {
+    var toggles = document.querySelectorAll('.section-toggle');
+    toggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            var section = this.nextElementSibling;
+            if (section && section.style.display === 'none') {
+                section.style.display = 'block';
+                this.textContent = this.textContent.replace('▸', '▾');
+            } else if (section) {
+                section.style.display = 'none';
+                this.textContent = this.textContent.replace('▾', '▸');
+            }
+        });
+    });
+});
+</script>
