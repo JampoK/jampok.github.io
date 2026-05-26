@@ -235,24 +235,8 @@ h2 {
 	padding-bottom: 0.5rem
 }
 
-h2.section-toggle {
-	cursor: pointer;
-	user-select: none;
-	transition: color 0.2s ease;
-}
-
 h2.section-toggle:hover {
 	color: var(--grey);
-}
-
-h2.section-toggle::after {
-	content: ' ▸';
-	font-size: 14px;
-	color: var(--grey);
-}
-
-h2.section-toggle.active::after {
-	content: ' ▾';
 }
 
 h3 {

@@ -219,7 +219,6 @@ function initialize() {
     // Initialize and set up event delegation
     initializeHoverEffects();
     initializeAccordion();
-    initializeSectionToggles();
 
     // No need for 'contentUpdated' listener anymore since we use delegation on body
 }
@@ -262,25 +261,3 @@ if (document.readyState === 'loading') {
     initialize();
 }
 
-// Section toggle for Certifications & Core Skills
-function initializeSectionToggles() {
-    if (document.body.dataset.sectionTogglesInitialized) return;
-    document.body.dataset.sectionTogglesInitialized = 'true';
-
-    document.body.addEventListener('click', function(e) {
-        var toggle = e.target.closest('.section-toggle');
-        if (!toggle) return;
-
-        e.stopPropagation();
-        var section = toggle.nextElementSibling;
-        if (!section) return;
-
-        if (section.style.display === 'none') {
-            section.style.display = 'block';
-            toggle.classList.add('active');
-        } else {
-            section.style.display = 'none';
-            toggle.classList.remove('active');
-        }
-    });
-}
