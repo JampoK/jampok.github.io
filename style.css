@@ -235,9 +235,7 @@ h2 {
 	padding-bottom: 0.5rem
 }
 
-h2.section-toggle:hover {
-	color: var(--grey);
-}
+
 
 h3 {
 	font-family: 'Inter-Medium', 'Helvetica', sans-serif;
@@ -289,33 +287,16 @@ p.small {
 
 /* LIST STYLING */
 ul {
-	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 0.5rem 1.2rem;
+	list-style: disc;
 }
 
 li {
 	font-family: 'Inter-Medium', 'Helvetica', sans-serif;
 	font-size: 14px;
-	line-height: 150%;
+	line-height: 160%;
 	color: var(--black);
-	padding: 2px 0;
-}
-
-.experience-details-inner ul {
-	padding-left: 1rem;
-}
-
-.experience-details-inner li {
-	position: relative;
-	padding-left: 12px;
-}
-
-.experience-details-inner li::before {
-	content: '—';
-	position: absolute;
-	left: 0;
-	color: var(--grey);
 }
 
 .experience-details-inner li a {
