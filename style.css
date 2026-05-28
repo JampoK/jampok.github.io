@@ -863,6 +863,17 @@ ul.footer-social {
 	grid-template-rows: 1fr;
 }
 
+/* Always-expanded experience-details (for Certifications, Core Skills, etc.) */
+.content > .experience-details {
+	grid-template-rows: 1fr;
+}
+
+.content > .experience-details .experience-details-inner h4,
+.content > .experience-details .experience-details-inner li {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 /* Staggered Animation */
 .experience-details-inner h4,
 .experience-details-inner li {
